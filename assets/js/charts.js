@@ -2,7 +2,7 @@ Vue.use(VueFusionCharts, FusionCharts);
 var app = new Vue({
     el: '#chart1',
     data: {
-        width: '800',
+        width: '100%',
         height: '400',
         type: 'column2d',
         dataFormat: 'json',
@@ -49,7 +49,7 @@ var app = new Vue({
 var app = new Vue({
     el: '#chart2',
     data: {
-        width: '600',
+        width: '100%',
         height: '400',
         type: 'pyramid',
         dataFormat: 'json',
