@@ -27,10 +27,7 @@ var app = new Vue({
             }, {
                 "label": "Herrajes",
                 "value": "1.4"
-            }, {
-                "label": "Agarraderas",
-                "value": "1.5"
-            }, {
+            },{
                 "label": "Maquinarias",
                 "value": "0.1"
             }, {
