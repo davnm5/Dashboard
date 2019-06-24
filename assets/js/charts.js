@@ -3,7 +3,7 @@ var app = new Vue({
     el: '#chart1',
     data: {
         width: '100%',
-        height: '400',
+        height: '380',
         type: 'column2d',
         dataFormat: 'json',
         dataSource: {
@@ -27,6 +27,10 @@ var app = new Vue({
             }, {
                 "label": "Herrajes",
                 "value": "1.4"
+            },
+              {
+                "label": "Agarraderas",
+                "value": "1.1"
             },{
                 "label": "Maquinarias",
                 "value": "0.1"
@@ -47,7 +51,7 @@ var app = new Vue({
     el: '#chart2',
     data: {
         width: '100%',
-        height: '400',
+        height: '380',
         type: 'pyramid',
         dataFormat: 'json',
         dataSource: {
@@ -86,7 +90,7 @@ var app = new Vue({
     el: '#chart3',
     data: {
         width: '100%',
-        height: '400',
+        height: '380',
         type: 'angulargauge',
         dataFormat: 'json',
         dataSource: {

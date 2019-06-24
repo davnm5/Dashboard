@@ -35,15 +35,22 @@
                        
                         <div class="col-md-6">
                             <div class="card ">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Cantidad de productos vendidos</h4>
-                                    <p class="card-category">Últimas 24 horas</p>
-                                </div>
-                                <div class="card-body ">
-                                    <div id="chart1">
-                                        <fusioncharts :type="type" :width="width" :height="height" :dataFormat="dataFormat" :dataSource="dataSource"></fusioncharts>
-                                    </div>
-                                </div>
+                                    <div class="card-header ">
+                                            <h4 class="card-title">Indicador de productos disponibles en STOCK</h4>
+                                            <p class="card-category">Se incluyen a todos los productos</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chart5">
+                                                <fusioncharts :type="type" :width="width" :height="height" :dataFormat="dataFormat" :dataSource="dataSource"></fusioncharts>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer ">
+                                            <hr>
+                                            <div class="stats">
+                                                <i class="now-ui-icons loader_refresh spin"></i>Actualizado hace 3 minutos
+                                            </div>
+                                        </div>
+                                
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -57,6 +64,12 @@
                                         <fusioncharts :type="type" :width="width" :height="height" :dataFormat="dataFormat" :dataSource="dataSource"></fusioncharts>
                                     </div>
                                 </div>
+                                <div class="card-footer ">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="now-ui-icons loader_refresh spin"></i> Actualizado hace 3 minutos
+                                        </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -80,21 +93,21 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card ">
-                                <div class="card-header ">
-                                    <h4 class="card-title">Indicador de productos disponibles en STOCK</h4>
-                                    <p class="card-category">Se incluyen a todos los productos</p>
-                                </div>
-                                <div class="card-body ">
-                                    <div id="chart5">
-                                        <fusioncharts :type="type" :width="width" :height="height" :dataFormat="dataFormat" :dataSource="dataSource"></fusioncharts>
-                                    </div>
-                                </div>
-                                <div class="card-footer ">
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="now-ui-icons loader_refresh spin"></i>Actualizado hace 3 minutos
-                                    </div>
-                                </div>
+                                    <div class="card-header ">
+                                            <h4 class="card-title">Cantidad de productos vendidos</h4>
+                                            <p class="card-category">Últimas 24 horas</p>
+                                        </div>
+                                        <div class="card-body ">
+                                            <div id="chart1">
+                                                <fusioncharts :type="type" :width="width" :height="height" :dataFormat="dataFormat" :dataSource="dataSource"></fusioncharts>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer ">
+                                                <hr>
+                                                <div class="stats">
+                                                    <i class="now-ui-icons loader_refresh spin"></i> Actualizado hace 3 minutos
+                                                </div>
+                                            </div>
                             </div>
                         </div>
                         <div class="col-md-6">
