@@ -308,3 +308,125 @@ var app = new Vue({
     ]
   }
 }}});
+
+
+
+FusionCharts.ready(function() {
+  var myChart = new FusionCharts({
+    type: "dragcolumn2d",
+    renderAt: "chart-container",
+    width: "100%",
+    height: "450",
+    dataFormat: "json",
+    dataSource: {
+      chart: {
+        caption: "Proyecciones de Ventas de Vidrios y Policarbonatos",
+        subCaption:
+          "Arrastre la parte superior de las columnas para ajustar proyecciones para 2019 & 2020",
+        numberPrefix: "$",
+        numberSuffix: "K",
+        yaxismaxvalue: "200",
+        theme: "fusion",
+        plotToolText: "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+      },
+      categories: [
+        {
+          category: [
+            {
+              label: "2016",
+              fontItalic: "0"
+            },
+            {
+              label: "2017",
+              fontItalic: "0"
+            },
+            {
+              label: "2018",
+              fontItalic: "0"
+            },
+            {
+              label: "2019 (Proyectado)"
+            },
+            {
+              label: "2020 (Proyectado)"
+            }
+          ]
+        }
+      ],
+      dataset: [
+        {
+          seriesname: "Vidrios",
+          data: [
+            {
+              value: "73",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "80",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "97",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "110",
+              toolText: "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+            },
+            {
+              value: "180",
+              toolText: "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+            }
+          ]
+        },
+        {
+          seriesname: "Policarbonato",
+          data: [
+            {
+              value: "63.2",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "68",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "82",
+              alpha: "100",
+              allowDrag: "0"
+            },
+            {
+              value: "99",
+              toolText: "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+            },
+            {
+              value: "150",
+              toolText: "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+            }
+          ]
+        }
+      ]
+    },
+    events: {
+      dataplotDragEnd: function(ev, props) {
+        console.log(props);
+        var dataSet = props.datasetName;
+        var beforeVal = Math.round(props.startValue * 100) / 100;
+        var afterVal = Math.round(props.endValue * 100) / 100;
+        document.getElementById("info").innerHTML =
+          "<b>" +
+          dataSet +
+          "</b> es modificado a <b>$" +
+          afterVal +
+          "K</b> de <b>$" +
+          beforeVal +
+          "K</b>";
+      }
+    }
+  }).render();
+});

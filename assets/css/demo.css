@@ -1,7 +1,31 @@
 .tim-row {
     margin-bottom: 20px;
 }
+.dot-green {
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot-orange {
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .dot-red {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
 
+.table td th {
+    text-align: center;   
+ }
 .tim-white-buttons {
     background-color: #777777;
 }
